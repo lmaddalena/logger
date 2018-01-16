@@ -24,7 +24,7 @@ void log_err(char *msg, ...)
     log_assert(msg != NULL);
 
     va_start(argp, msg);
-    fprintf(stderr, "ERR: ");
+    fprintf(stderr, "ERR : ");
     vfprintf(stderr, msg, argp);
     va_end(argp);
 
