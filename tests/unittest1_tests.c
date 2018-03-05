@@ -1,5 +1,5 @@
 #include "test.h"
-#include "log.h"
+#include "logger.h"
 
 DEFINE_TEST(test1)
 {

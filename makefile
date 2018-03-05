@@ -2,7 +2,7 @@ CC = gcc
 
 CFLAGS = -g -Wall -Werror -Isrc -std=c99 -O2
 LDFLAGS =  
-TARGET = bin/loger.a
+TARGET = bin/logger.a
 
 SRCS=$(wildcard src/**/*.c src/*.c)
 OBJS=$(patsubst src/%.c,build/%.o,$(SRCS))

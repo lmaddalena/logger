@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdarg.h>
 #include <stdlib.h>
-#include "log.h"
+#include "logger.h"
 
 void logger_log_info(char *msg, ...)
 {
