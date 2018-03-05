@@ -5,7 +5,7 @@ LDFLAGS =
 TARGET = bin/logger.a
 
 SRCS=$(wildcard src/**/*.c src/*.c)
-OBJS=$(patsubst src/%.c,build/%.o,$(SRCS))
+OBJS=$(patsubst %.c,%.o,$(SRCS))
 
 TEST_SRCS=$(wildcard tests/*_tests.c)
 TESTS=$(patsubst %.c,%,$(TEST_SRCS))
@@ -16,10 +16,8 @@ $(TARGET): $(OBJS)
 	ar rcs $(TARGET) $(OBJS)
 	ranlib $(TARGET)
 
-$(OBJS): $(SRCS)
-	$(CC) $(CFLAGS) -c $(SRCS) -o $(OBJS)
-
 $(TESTS): $(TARGET)
+
 tests: CFLAGS += $(TARGET)
 tests: $(TESTS)
 	sh ./tests/runtests.sh
