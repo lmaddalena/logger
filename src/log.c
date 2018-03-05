@@ -3,11 +3,11 @@
 #include <stdlib.h>
 #include "log.h"
 
-void log_info(char *msg, ...)
+void logger_log_info(char *msg, ...)
 {
     va_list argp;
 
-    log_assert(msg != NULL);
+    logger_log_assert(msg != NULL);
 
     va_start(argp, msg);
     fprintf(stderr, "INFO: ");
@@ -17,11 +17,11 @@ void log_info(char *msg, ...)
     fprintf(stderr, "\n");
 }
 
-void log_err(char *msg, ...)
+void logger_log_err(char *msg, ...)
 {
     va_list argp;
 
-    log_assert(msg != NULL);
+    logger_log_assert(msg != NULL);
 
     va_start(argp, msg);
     fprintf(stderr, "ERR : ");
@@ -32,11 +32,11 @@ void log_err(char *msg, ...)
 
 }
 
-void log_warn(char *msg, ...)
+void logger_log_warn(char *msg, ...)
 {
     va_list argp;
 
-    log_assert(msg != NULL);
+    logger_log_assert(msg != NULL);
 
     va_start(argp, msg);
     fprintf(stderr, "WARN: ");
@@ -47,11 +47,11 @@ void log_warn(char *msg, ...)
 
 }
 
-void log_abort(char *msg, ...)
+void logger_log_abort(char *msg, ...)
 {
     va_list argp;
 
-    log_assert(msg != NULL);
+    logger_log_assert(msg != NULL);
 
     va_start(argp, msg);
     fprintf(stderr, "ERR : ");

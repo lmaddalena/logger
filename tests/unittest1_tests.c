@@ -1,16 +1,22 @@
 #include "test.h"
+#include "log.h"
 
-DEFINE_TEST(test_operation1)
+DEFINE_TEST(test1)
 {
 
-    test_assert(2 == 2, "demo assertion");
+    logger_log_info("this is an information");
+    logger_log_warn("this is a warning");
+    logger_log_err("this is an error");    
+    //logger_log_assert(1 > 2);
+
+    //test_assert(2 == 2, "demo assertion");
     return NULL;
 }
 
 
 DEFINE_TEST(all_tests)
 {
-    test_run(test_operation1);
+    test_run(test1);
 
     return NULL;
 }
