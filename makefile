@@ -1,6 +1,6 @@
 CC = gcc
 
-CFLAGS = -g -Wall -Werror -Isrc -std=c99 -O2
+CFLAGS = -std=c99 -g -Wall -Isrc -Werror
 LDFLAGS =  
 TARGET = bin/logger.a
 
