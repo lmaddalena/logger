@@ -4,7 +4,7 @@
 DEFINE_TEST(test1)
 {
 
-    logger_log_info("this is an information");
+    logger_log_info("this is an information: %d, %d, %d...", 1, 2, 3);
     logger_log_warn("this is a warning");
     logger_log_err("this is an error");    
     //logger_log_assert(1 > 2);
