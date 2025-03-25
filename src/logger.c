@@ -51,7 +51,8 @@ void logger_log_abort(char *msg, ...)
 {
     va_list argp;
 
-    logger_log_assert(msg != NULL);
+    if(msg == NULL)
+	    msg = "aborting...";
 
     va_start(argp, msg);
     fprintf(stderr, "ERR : ");
