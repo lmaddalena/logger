@@ -1,5 +1,5 @@
 {
-    "version": "2.0.0",    
+    "version": "0.1.0",    
      "windows": {
          "command": "build.bat",
          "isShellCommand": true,
@@ -50,17 +50,6 @@
                  "message": 5
              }
          }
-    },
-    "tasks": [
-        {
-            "label": "make",
-            "type": "shell",
-            "problemMatcher": [],
-            "group": {
-                "_id": "build",
-                "isDefault": false
-            }
-        }
-    ]
+     }
  }
  
