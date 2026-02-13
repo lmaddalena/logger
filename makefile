@@ -2,7 +2,7 @@ CC = gcc
 
 CFLAGS = -std=c99 -g -Wall -Isrc -Werror
 LDFLAGS =  
-TARGET = bin/logger.a
+TARGET = bin/liblogger.a
 
 TEST_SRCS=$(wildcard tests/*_tests.c)
 TESTS=$(patsubst %.c,%,$(TEST_SRCS))
