@@ -10,10 +10,12 @@ TESTS=$(patsubst %.c,%,$(TEST_SRCS))
 all: $(TARGET) tests
 
 $(TARGET): build/logger.o
+	@mkdir -p bin
 	ar rcs $@ $^
 	ranlib $@
 
 build/logger.o: src/logger.c src/logger.h
+	@mkdir -p build
 	$(CC) $(CFLAGS) -c $< -o $@
 
 
